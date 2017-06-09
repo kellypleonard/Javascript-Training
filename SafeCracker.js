@@ -32,7 +32,7 @@ function inputGuess() {
         text = "Try again.";
     }
     document.getElementById("response").innerHTML = text;
-	guessListText += (guessArray[guess - 1]).toString() + "<br>";
-    document.getElementById("guessList").innerHTML = guessListText;
+	guessListText = (guessArray[guess-1]).toString() + "<br>" + guessListText;
+	document.getElementById("guessList").innerHTML = guessListText;
 	guess++;
 }
