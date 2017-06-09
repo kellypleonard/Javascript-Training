@@ -12,11 +12,27 @@ var targetNumberAsString = pad(targetNumber,3);
 // Make variable an array:
 targetNumberAsString.split("");
 //Set initial remaining guesses:
-var GuessesRemaining = 20;
+var guessesRemaining = 20;
 // Run loop while within number of guesses
-var guess = "000";
-do { document.getElementById("guess").innerHTML = guess;
-    GuessesRemaining--;
-}	
-    while (GuessesRemaining > 0);  
-	
+var guessArray = [];
+var guessListText = ""
+var guess = 1;
+document.getElementById("targetNum").innerHTML = targetNumberAsString;
+function inputGuess() {
+    var x, text;
+
+    // Get the value of the input field with id="numb"
+    x = document.getElementById("numb").value;
+	// Add the value to the guess array
+	guessArray[guessArray.length] = x;
+    // If x is Not a Number or is equal to the guess
+    if (isNaN(x) || x == targetNumber) {
+        text = "You guessed it!";
+    } else {
+        text = "Try again.";
+    }
+    document.getElementById("response").innerHTML = text;
+	guessListText += (guessArray[guess - 1]).toString() + "<br>";
+    document.getElementById("guessList").innerHTML = guessListText;
+	guess++;
+}

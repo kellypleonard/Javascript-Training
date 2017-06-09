@@ -4,16 +4,43 @@
 <style>
 #welcome {
     font-size: 1.5em;
-	margin: 50px;
+	margin-left: 20%;
+	margin-right: 20%;
 }
-#guess {
-    font-size: 8em;
+#submit {
+    font-size: 1.5em;
+    text-align: center;
+}
+#response {
+    font-size: 1.5em;
+    text-align: center;
+	margin-top: 15px;
+}
+#guessList {
+    font-size: 4em;
 	letter-spacing: 30px;
 	text-align: center;
+	margin-top: 15px;
+}
+#remaining {
+    font-size: 2em;
+	margin: 50px;
+}
+#gonext {
+	margin: 50px;
+    font-size: 2em;
 }
 </style>
-<body><p id="welcome">Welcome to Safe Cracker! You have 20 guesses to figure out the combination.</p>
-<div id="guess"></div>
-</body><script src="SafeCracker.js">
+<body><p id="welcome">Welcome to Safe Cracker! Figure out the combination before running out of guesses.</p>
+<div id="targetNum"></div>
+<div id="submit">
+    <input id="numb">
+    <button type="button" onclick="inputGuess()">Submit</button>
+	</div>
+<div id="response"></div>
+<div id="guessList"></div>
+<div id="remaining"></div>
+</body>
+<script src="SafeCracker.js">
 </script>
 </html>
