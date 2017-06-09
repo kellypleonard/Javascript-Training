@@ -1,14 +1,22 @@
-var TargetNumber = Math.floor(Math.random() * 1000); // Stores a random number between 0 and 999
-	function pad(num, size) {						 // Converts the number to string with leading zeros
-		var s = num+"";
-		while (s.length < size) s = "0" + s;
-		return s;
-		}
-var TargetNumberAsString = pad(TargetNumber,3);     // Stores number as variable.
-TargetNumberAsString.split(""); 					// Makes variable an array (required to prevent errors)
-var text = "";
+"use strict";
+// Set function to convert number to string with leading zeros:
+function pad(num, size) {	
+    var s = num+"";
+    while (s.length < size) s = "0" + s;
+    return s;
+}
+// Store random number between 0 and 999:
+var targetNumber = Math.floor(Math.random() * 1000); 					
+// Stores number as string with leading zeros:
+var targetNumberAsString = pad(targetNumber,3);
+// Make variable an array:
+targetNumberAsString.split("");
+//Set initial remaining guesses:
 var GuessesRemaining = 20;
-// while (GuessesRemaining > 0) {				 	// Run loop while within number of guesses
-   document.getElementById("demo").innerHTML = "What is your guess?";
- //  i--;
-//}
+// Run loop while within number of guesses
+var guess = "000";
+do { document.getElementById("guess").innerHTML = guess;
+    GuessesRemaining--;
+}	
+    while (GuessesRemaining > 0);  
+	
