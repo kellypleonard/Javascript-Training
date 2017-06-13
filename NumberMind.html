@@ -41,13 +41,12 @@ span.exactplace {
     background-color: lightgreen;
 }
 </style>
-<body><p id="welcome"><strong>Welcome to Safe Cracker!</strong> Discover the combination before running out of guesses. In the feedback list at the bottom, the value highlighted in green (e.g, <span class="exactplace">2</span>) represents the number of digits in your guess that are in the combination and in the correct place. The value highlighted in yellow (e.g., <span class="wrongplace">1</span>) represents the number of digits in your guess that are in the combination but in the wrong place. So, your goal is to get to <span class="exactplace">3</span> <span class="wrongplace">0</span>, which means your guess is identical to the combination.</p>
+<body><p id="welcome"><strong>Welcome to Safe Cracker!</strong> Discover the three-digit combination before running out of guesses. In the feedback list at the bottom, the value highlighted in green (e.g, <span class="exactplace">2</span>) represents the number of digits in your guess that are in the combination and in the correct place. The value highlighted in yellow (e.g., <span class="wrongplace">1</span>) represents the number of digits in your guess that are in the combination but in the wrong place. So, your goal is to get to <span class="exactplace">3</span> <span class="wrongplace">0</span>, which means your guess is identical to the combination.</p>
 <div id="targetNum"></div>
 <div id="submit">
-    <input type="text" id="guessEntered">
+    <input type="number" id="guessEntered" width="10" min="0" max="999">
     <button onclick="inputGuess()">Submit</button>
 	</div>
-<p>Feedback:</p>
 <div id="response"></div>
 <div id="guessList"></div>
 <div id="remaining"></div>
