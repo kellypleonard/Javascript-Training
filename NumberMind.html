@@ -12,31 +12,38 @@
 		font-size: 1.2em;
 }
 #response {
-    font-size: 1.5em;
+    font-size: 1em;
 	margin-top: 15px;
 }
 #guessList {
     font-size: 1.2em;
 	letter-spacing: 0.5em;
 	margin-top: 15px;
-	column-count: 3;
-	margin-right: 25%;
+	column-count: 2;
+	margin-right: 50%;
 }
 #remaining {
-    font-size: 2em;
+    font-size: 1em;
 	margin: 50px;
 }
 #gonext {
 	margin: 50px;
     font-size: 2em;
+}	
+span.wrongplace {
+    background-color: yellow;
+}
+span.exactplace {
+    background-color: lightgreen;
 }
 </style>
-<body><p id="welcome">Welcome to Safe Cracker! Figure out the combination before running out of guesses.</p>
+<body><p id="welcome"><strong>Welcome to Safe Cracker!</strong> Discover the combination before running out of guesses. In the feedback list at the bottom, the value highlighted in green (e.g, <span class="exactplace">2</span>) represents the number of digits in your guess that are in the combination and in the correct place. The value highlighted in yellow (e.g., <span class="wrongplace">1</span>) represents the number of digits in your guess that are in the combination but in the wrong place. So, your goal is to get to <span class="exactplace">3</span> <span class="wrongplace">0</span>, which means your guess is identical to the combination.</p>
 <div id="targetNum"></div>
 <div id="submit">
-    <input id="numb">
-    <button type="button" onclick="inputGuess()">Submit</button>
+    <input type="text" id="guessEntered">
+    <button onclick="inputGuess()">Submit</button>
 	</div>
+<p>Feedback:</p>
 <div id="response"></div>
 <div id="guessList"></div>
 <div id="remaining"></div>
