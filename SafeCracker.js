@@ -37,20 +37,20 @@ function inputGuess() {
 		(Number(guessesRemain != 1))) {
         case 0:
 			guessesRemain--;
-			guessListText = currentGuess.concat("  ", "<span class=\"exactplace\">", exactPlace, "</span>&nbsp;<span class=\"wrongplace\">", wrongPlace, "</span><br>", guessListText);
+			guessListText = currentGuess.concat("&nbsp;&nbsp;", "<span class=\"exactplace\">", exactPlace, "</span>&nbsp;<span class=\"wrongplace\">", wrongPlace, "</span><br>", guessListText);
 			document.getElementById("response").innerHTML = "Sorry, you're out of guesses. The combination was " + combination + ". Please refresh the page to try a new game.";
 			document.getElementById("guessList").innerHTML = guessListText;
 			break;
 		case 1:
 		    guessesRemain--;
-            guessListText = currentGuess.concat("  ", "<span class=\"exactplace\">", exactPlace, "</span>&nbsp;<span class=\"wrongplace\">", wrongPlace, "</span><br>", guessListText);
+            guessListText = currentGuess.concat("&nbsp;&nbsp;", "<span class=\"exactplace\">", exactPlace, "</span>&nbsp;<span class=\"wrongplace\">", wrongPlace, "</span><br>", guessListText);
 	        document.getElementById("response").innerHTML = "Try again.";
             document.getElementById("guessList").innerHTML = guessListText;
 			break;
 		case 2:
 		case 3:
             guessesRemain--;
-			guessListText = currentGuess.concat("  ", "<span class=\"exactplace\">", exactPlace, "</span>&nbsp;<span class=\"wrongplace\">", wrongPlace, "</span><br>", guessListText);
+			guessListText = currentGuess.concat("&nbsp;&nbsp;", "<span class=\"exactplace\">", exactPlace, "</span>&nbsp;<span class=\"wrongplace\">", wrongPlace, "</span><br>", guessListText);
 			document.getElementById("response").innerHTML = "You guessed it!";
 			document.getElementById("guessList").innerHTML = guessListText;
 			break;
